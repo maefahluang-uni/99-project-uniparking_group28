@@ -1,4 +1,4 @@
-public class admin{
+public class Admin{
 
     private int adminID;
     private String firstname,lastName,email,username,password;
@@ -11,7 +11,7 @@ public class admin{
         adminID = this.adminID;
     }
 
-    public int getadminID(){
+    public int getAdminID(){
         return adminID;
     }
 
@@ -27,22 +27,22 @@ public class admin{
     public String getLastName(){
         return lastName;
     }
-    public void setemail(String email){
+    public void setEmail(String email){
         email = this.email;
     }
-    public String getemail(){
+    public String getEmail(){
         return email;
     }
     public void setUsername(String username){
         username = this.username;
     }
-    public String getusername(){
+    public String getUsername(){
         return username;
     }
     public void setPassword(String password){
         password = this.password;
     }
-    public String getpassword(){
+    public String getPassword(){
         return password;
     }
 

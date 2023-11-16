@@ -1,7 +1,7 @@
-public class feedback{
+public class Feedback{
     private int feedbackID,userID;
     private String feedbackText;
-    private date timeStamp;
+    private Date timeStamp;
 
     public feedback(){
 
@@ -10,10 +10,10 @@ public class feedback{
     public feedback(int feedbackID){
         feedbackID = this.feedbackID;
     }
-    public int getfeedbackID(){
+    public int getFeedbackID(){
         return feedbackID;
     }
-    public setuserID(int userID){
+    public setUserID(int userID){
         userID = this.userID;
     }
     public int getUserID(){
@@ -25,10 +25,10 @@ public class feedback{
     public String getfeedbackText(){
         return feedbackText; 
     }
-    public settimeStamp(date timeStamp){
+    public setTimeStamp(Date timeStamp){
         timeStamp = this.timeStamp;
     }
-    public date gettimeStamp(){
+    public date getTimeStamp(){
         return timeStamp;
     }
 
