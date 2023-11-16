@@ -58,4 +58,8 @@ public class User {
     public void setFeedback(String feedback){
         feedback = this.feedback;
     }
+
+    public String getfeedback(){
+        return feedback;
+    }
 }
