@@ -1,7 +1,7 @@
 public class Admin{
 
     private int adminID;
-    private String firstname,lastName,email,username,password;
+    private String firstName,lastName,email,username,password;
 
     public admin(){
 
@@ -15,11 +15,11 @@ public class Admin{
         return adminID;
     }
 
-    public void setFirstName(String firstname){
+    public void setFirstName(String firstName){
         firstname = this.firstname;
     }
     public String getFirstname(){
-        return firstname;
+        return firstName;
     }
     public void setLastName(String lastName){
         lastName = this.lastName;
