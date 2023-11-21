@@ -1,52 +1,64 @@
+package th.mfu;
+
+import java.sql.Date;
+import java.sql.Time;
+
 public class Reservation{
 
-      private int ReservationID,userID,spaceID;
-      private date ReservationTimestamp,expiryTimeStamp;
-      private string status;
+      private int reservationID,userID;
+      private Date date;
+      private Time startTime;
+      private String location, duration;
 
       public Reservation(){
         
       }
 
-      public Reservation(int ReservationID, int userID, int spaceID){
-        ReservationID = this.ReservationID;
+      public Reservation(int ReservationID, int userID, String location){
+        ReservationID = this.reservationID;
         userID = this.userID;
-        spaceID = this.spaceID;
+        location = this.location;
 
       }
 
-      public int getReservayionID(){
-        return ReservationID;
+      public int getReservationID(){
+        return reservationID;
       }
 
-      public int getuserID(){
+      public int getUserID(){
         return userID;
       }
 
-      public int getSpaceID(){
-        return spaceID;
+      public String getLocation(){
+        return location;
       }
 
-      public void setReservationTimeStamp(date ReservationTimestamp, date expiryTimeStamp){
-        ReservationTimestamp = this.ReservationTimestamp;
-        expiryTimeStamp = this.expiryTimeStamp;
+      public Date getDate() {
+        return date;
       }
 
-      public date getReservationTimestamp(){
-        return ReservationTimestamp;
+      public void setDate(Date date) {
+        this.date = date;
       }
 
-      public date getexpiryTimeStamp(){
-        return expiryTimeStamp;
+      public Time getStartTime() {
+        return startTime;
       }
 
-      public void setstatus(String status){
-        status = this.status;
+      public void setStartTime(Time startTime) {
+        this.startTime = startTime;
       }
 
-      public String getstatus(){
-        return status;
+      public String getDuration() {
+        return duration;
       }
+
+      public void setDuration(String duration) {
+        this.duration = duration;
+      }
+
+
+
 
 
     

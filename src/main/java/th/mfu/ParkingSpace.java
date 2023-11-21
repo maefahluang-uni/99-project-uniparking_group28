@@ -1,11 +1,10 @@
-import java.sql.Date;
+package th.mfu;
 
 public class ParkingSpace{
 
-    private int spaceID, adminUserID;
-    private String location, spaceType;
+    private int spaceID, adminID;
+    private String location;
     private Boolean availability;
-    private Date lastUpdateTimeStamp;
 
     public ParkingSpace(){
 
@@ -13,7 +12,7 @@ public class ParkingSpace{
 
     public ParkingSpace(int spaceID, int adminUserID){
         spaceID = this.spaceID;
-        adminUserID = this.adminUserID;
+        adminUserID = this.adminID;
     }
 
     public int getSpaceID(){
@@ -21,7 +20,7 @@ public class ParkingSpace{
     }
 
     public int getAdminUserID(){
-        return adminUserID;
+        return adminID;
     }
 
     public void setLocation(String location){
@@ -32,14 +31,6 @@ public class ParkingSpace{
         return location;
     }
 
-    public void setSpaceType(String spaceType){
-        spaceType = this.spaceType;
-    }
-
-    public String getSpaceType(){
-        return spaceType;
-    }
-
     public void setAvailability(Boolean availability){
         availability = this.availability;
     }
@@ -47,14 +38,5 @@ public class ParkingSpace{
     public Boolean getAvailability(){
         return availability;
     }
-
-    public void setLastUpdateTimeStamp(Date lastUpdateTimeStamp){
-        lastUpdateTimeStamp = this.lastUpdateTimeStamp;
-    }
-
-    public Date getLastUpdateTimeStamp(){
-        return lastUpdateTimeStamp;
-    }
-
 
 }

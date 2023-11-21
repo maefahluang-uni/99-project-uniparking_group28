@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Type</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .left-half {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+        }
+
+        .right-half {
+            background-color: #990000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 0 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            outline: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .user-btn {
+            background-color: #990000;
+            color: white;
+        }
+
+        .admin-btn {
+            background-color: white;
+            color: #990000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="left-half">
+        <button class="user-btn" th:onclick="userButtonClick()">USER</button>
+    </div>
+    
+    <div class="right-half">
+        <button class="admin-btn" th:onclick="adminButtonClick()">ADMIN</button>
+    </div>
+
+    <script>
+        function userButtonClick() {
+            // Redirect to login.html
+            window.location.href = '/login';
+        }
+
+        function adminButtonClick() {
+            window.location.href = '/admin-login';
+        }
+    </script>
+
+</body>
+</html>

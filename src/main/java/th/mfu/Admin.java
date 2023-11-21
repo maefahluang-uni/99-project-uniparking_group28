@@ -1,13 +1,15 @@
+package th.mfu;
+
 public class Admin{
 
     private int adminID;
-    private String firstName,lastName,email,username,password;
+    private String username,password;
 
-    public admin(){
+    public Admin(){
 
     }
 
-    public admin(int adminID){
+    public Admin(int adminID){
         adminID = this.adminID;
     }
 
@@ -15,33 +17,18 @@ public class Admin{
         return adminID;
     }
 
-    public void setFirstName(String firstName){
-        firstname = this.firstname;
-    }
-    public String getFirstname(){
-        return firstName;
-    }
-    public void setLastName(String lastName){
-        lastName = this.lastName;
-    }
-    public String getLastName(){
-        return lastName;
-    }
-    public void setEmail(String email){
-        email = this.email;
-    }
-    public String getEmail(){
-        return email;
-    }
     public void setUsername(String username){
         username = this.username;
     }
+
     public String getUsername(){
         return username;
     }
+
     public void setPassword(String password){
         password = this.password;
     }
+    
     public String getPassword(){
         return password;
     }

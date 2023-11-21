@@ -1,8 +1,10 @@
+package th.mfu;
+
 public class User {
 
     private int userID;
-    private String firstName, lastName, email, username, password, role;
-
+    private String username, password;
+    
     public User() {
         
     }
@@ -13,30 +15,6 @@ public class User {
 
     public int getUserID(){
         return userID;
-    }
-
-    public void setFirstName(String firstName){
-        firstName = this.firstName;
-    }
-
-    public String getFirstName(){
-        return firstName;
-    }
-
-    public void setLastName(String lastName){
-        lastName = this.lastName;
-    }
-
-    public String getLastName(){
-        return lastName;
-    }
-
-    public void setEmail(String email){
-        email = this.email;
-    }
-
-    public String getEmail(String email){
-        return email;
     }
 
     public void setUsername(String username){
@@ -53,13 +31,5 @@ public class User {
 
     public String getPassword(){
         return password;
-    }
-
-    public void setFeedback(String feedback){
-        feedback = this.feedback;
-    }
-
-    public String getfeedback(){
-        return feedback;
     }
 }
