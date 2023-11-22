@@ -21,6 +21,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class UserController {
 
 
+    @InitBinder
+    public final void initBinderUsuariosFormValidator(final WebDataBinder binder, final Locale locale) {
+        final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", locale);
+        binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, true));
+    }
+
     @GetMapping("/user")
     public String showUserTypePage() {
         return "user-type-select"; 
