@@ -27,7 +27,7 @@ public class UserController {
         binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, true));
     }
 
-    @GetMapping("/user")
+    @GetMapping("/users")
     public String showUserTypePage() {
         return "user-type-select"; 
     }
@@ -40,6 +40,11 @@ public class UserController {
     @GetMapping("/admin-login")
     public String showAdminLoginPage() {
         return "admin-login"; 
+    }
+
+    @GetMapping("/signup")
+    public String showSignupPage() {
+        return "signup"; 
     }
 
     
