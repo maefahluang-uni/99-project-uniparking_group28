@@ -28,12 +28,12 @@ public class UserController {
     }
 
     @GetMapping("/users")
-    public String showUserTypePage() {
+    public String showUserTypePage(Model model) {
         return "user-type-select"; 
     }
 
     @GetMapping("/login")
-    public String showLoginPage() {
+    public String showLoginPage(Model model) {
         return "login";
     }
 
