@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page with Colored Tab and Text</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .white-tab {
+            background-color: #990000; /* Red tab color */
+            height: 1.5cm; /* Set a bit smaller height for the tab */
+            display: flex;
+            align-items: center;
+            padding-left: 20px; /* Add left padding to center text */
+            color: white; /* White text color */
+        }
+
+        .brand-text {
+            font-size: 1.5em;
+            margin-right: 20px; /* Add right margin for spacing */
+        }
+
+        .box {
+            background-color: #990000;
+            color: white;
+            height: 1.5cm;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin: 10px auto; /* Center horizontally and add margin between boxes */
+            border-radius: 8px; /* Add border-radius for rounded corners */
+            width: calc(100% - 40px); /* Adjust width to add space around the boxes */
+            box-sizing: border-box; /* Ensure padding and border are included in the width */
+        }
+
+        .box a {
+            color: white; /* Set hyperlink text color */
+            text-decoration: none; /* Remove default underline */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="white-tab">
+        <div class="brand-text">UNI PARKING</div>
+    </div>
+
+    <div class="box first-box">Lamduan Dormitory</div>
+    <div class="box"><a href="/m-square">M-Square</a></div>
+    <div class="box">F Dormitory</div>
+    <div class="box">Stadium</div>
+
+    <!-- The rest of your content goes here -->
+
+</body>
+</html>

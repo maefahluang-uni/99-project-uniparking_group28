@@ -8,6 +8,8 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            background-color: #990000; /* Set the background color to #990000 */
+            color: white; /* Set text color to white */
         }
 
         .reservation-container {
@@ -17,6 +19,8 @@
             border: 1px solid #ddd;
             padding: 20px;
             border-radius: 8px;
+            background-color: white; /* Set the box background color to white */
+            color: #990000; /* Set text color to #990000 */
         }
 
         label {
@@ -48,19 +52,13 @@
     <div class="reservation-container">
         <h2>Parking Reservation</h2>
 
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="John Doe" required>
-
-        <label for="regNumber">Vehicle Registration Number:</label>
-        <input type="text" id="regNumber" name="regNumber" placeholder="ABC123" required>
-
         <label for="date">Date:</label>
         <input type="date" id="date" name="date" required>
 
         <label for="time">Time:</label>
         <input type="time" id="time" name="time" required>
 
-        <button type="button" onclick="submitReservation()">Book Parking</button>
+        <button type="button" onclick="submitReservation()">Book Now</button>
     </div>
 
     <script>

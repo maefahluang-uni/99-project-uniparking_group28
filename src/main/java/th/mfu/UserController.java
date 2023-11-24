@@ -47,6 +47,21 @@ public class UserController {
         return "signup"; 
     }
 
+    @PostMapping("/main")
+    public String showMainPage(){
+        return "main-page";
+    }
+
+    @GetMapping("/m-square")
+    public String showMsquarePage(){
+        return "m-square";
+    }
+
+    @PostMapping("/reservation")
+    public String showReservationPage(){
+        return "reservation";
+    }
+
     
 
 

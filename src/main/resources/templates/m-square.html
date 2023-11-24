@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Page with Boxes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white; /* Set the background color to white */
+            color: #990000; /* Set text color to #990000 */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .white-tab {
+            background-color: #990000; /* Red tab color */
+            height: 1.5cm; /* Set a bit smaller height for the tab */
+            display: flex;
+            align-items: center;
+            padding-left: 20px; /* Add left padding to center text */
+            color: white; /* White text color */
+        }
+
+        .brand-text {
+            font-size: 1.5em;
+            margin-right: 20px; /* Add right margin for spacing */
+        }
+
+        .boxes-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .box {
+            background-color: #990000;
+            color: white;
+            height: 100px;
+            width: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            border-radius: 8px;
+            padding-top: 5px; /* Add padding to the top of the box */
+        }
+
+        .box-label {
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .book-button {
+            background-color: #00bb16;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="white-tab">
+        <div class="brand-text">UNI PARKING</div>
+    </div>
+
+    <div class="boxes-container">
+        <div class="box">
+            <div class="box-label">All Slot</div>
+        </div>
+        <div class="box">
+            <div class="box-label">Available Slot</div>
+        </div>
+    </div>
+
+    <button th:href="@{/reservationparking}" type="submit" class="book-button">Book</button>
+
+</body>
+</html>
