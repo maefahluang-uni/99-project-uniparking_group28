@@ -28,16 +28,16 @@ public class UserController {
     }
 
     @GetMapping("/users")
-    public String showUserTypePage(Model model) {
+    public String showUserTypePage() {
         return "user-type-select"; 
     }
 
-    @GetMapping("/login")
-    public String showLoginPage(Model model) {
+    @GetMapping("/to-login")
+    public String showLoginPage() {
         return "login";
     }
 
-    @GetMapping("/admin-login")
+    @GetMapping("/to-admin-login")
     public String showAdminLoginPage() {
         return "admin-login"; 
     }

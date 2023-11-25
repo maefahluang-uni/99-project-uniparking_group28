@@ -1,5 +1,8 @@
 package th.mfu.domain;
 
+import javax.persistence.Entity;
+
+
 public class User {
 
     private int userID;
