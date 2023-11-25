@@ -42,12 +42,7 @@ public class UserController {
         return "admin-login"; 
     }
 
-    @GetMapping("/signup")
-    public String showSignupPage() {
-        return "signup"; 
-    }
-
-    @PostMapping("/main")
+    @GetMapping("/main")
     public String showMainPage(){
         return "main-page";
     }
@@ -57,15 +52,12 @@ public class UserController {
         return "m-square";
     }
 
-    @PostMapping("/reservation")
-    public String showReservationPage(){
-        return "reservation";
+    @GetMapping("/m-booking")
+    public String showMBookingPage(){
+        return "booking";
     }
-@PostMapping("/test")
-    public String showLayoutPage(){
-        return "layout";
-    }
-    
+
+  
 
 
 

@@ -1,87 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Page with Boxes</title>
+    <title>Your Page Title</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
+
+
         body {
-            font-family: Arial, sans-serif;
+            background: linear-gradient(119deg, #900 -7.06%, #F8CDC5 73.19%);
             margin: 0;
-            padding: 0;
-            background-color: white; /* Set the background color to white */
-            color: #990000; /* Set text color to #990000 */
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            display: grid;
+            place-items: center;
         }
 
-        .white-tab {
-            background-color: #990000; /* Red tab color */
-            height: 1.5cm; /* Set a bit smaller height for the tab */
-            display: flex;
-            align-items: center;
-            padding-left: 20px; /* Add left padding to center text */
-            color: white; /* White text color */
-        }
+        .topbar {
+            width: 1440px;
+            height: 100px;
 
-        .brand-text {
-            font-size: 1.5em;
-            margin-right: 20px; /* Add right margin for spacing */
-        }
-
-        .boxes-container {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-            padding: 20px;
+
         }
 
-        .box {
-            background-color: #990000;
-            color: white;
-            height: 100px;
-            width: 100px;
+        .menu {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            border-radius: 8px;
-            padding-top: 5px; /* Add padding to the top of the box */
+            justify-content: space-between;
+            margin-right: 45px;
+            overflow: hidden;
+
         }
 
-        .box-label {
+
+        .menu a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
             text-align: center;
-            font-size: 14px;
+            padding: 14px 16px;
+            margin-top: 25px;
+            text-decoration: none;
         }
 
-        .book-button {
-            background-color: #00bb16;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
+        /* Change color on hover */
+        .menu a:hover {
+            color: black;
+        }
+
+        .logo2 {
+            width: 1440px;
+            height: 340px;
+            flex-shrink: 0;
+            top: 0px;
+        }
+
+        .box1 {
+            height: 200px;
+            flex-shrink: 0;
+            border-radius: 25px;
             margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box11,
+        .box22,
+        .box33,
+        .box44 {
+
+            color: #A33D3D;
+            text-align: center;
+            font-family: Outfit;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: 50px;
+            margin-left: 40px;
+            background-color: #fff;
+            border-radius: 50px 0px;
+            height: 300px;
+            width: 200px;
+
+        }
+
+
+        .number1 {
+            color: #528631;
+            text-align: center;
+            font-family: Outfit;
+            font-size: 96px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: 30px;
+        }
+
+        .book {
+            color: white;
+            font-size: 32px;
+            width: 175px;
+            height: 115px;
+            flex-shrink: 0;
+            border-radius: 25px;
+            background: #92C971;
+            margin-top: 30px;
+            margin-right: 30px;
+        }
+
+        .box2 {
+            width: 680px;
+            height: 200px;
+            flex-shrink: 0;
+            border-radius: 25px;
+            background: #FFF;
+            margin-top: 20px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .number2 {
+            color: #863131;
+            text-align: center;
+            font-family: Outfit;
+            font-size: 96px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: 35px;
+            margin-left: 100px;
+        }
+
+        .button-link {
+            width: 128.917px;
+            height: 43.098px;
+            transform: rotate(-4.994deg);
+            flex-shrink: 0;
+            background-color: #F66262;
+            border-radius: 10px;
             cursor: pointer;
+            
+        }
+
+        .a-link{
+            color: white;
+            /* Set hyperlink text color */
+            text-decoration: none;
+            /* Remove default underline */
         }
     </style>
 </head>
+
 <body>
 
-    <div class="white-tab">
-        <div class="brand-text">UNI PARKING</div>
-    </div>
-
-    <div class="boxes-container">
-        <div class="box">
-            <div class="box-label">All Slot</div>
-        </div>
-        <div class="box">
-            <div class="box-label">Available Slot</div>
+    <div class="topbar">
+        <img class="logo"
+            src="https://s3-alpha-sig.figma.com/img/4c73/d2d4/f21977bf9f99302584ef10f40251edea?Expires=1701648000&Signature=WjnwkfP-i0sGre4dKdDo9azW84X8CXLhPB79QFuPQRCv90jzHd59-PTR7meNUSySPsWFqk8~d1uONOB~37K0XUAEaNqpT4sUBROG9xYXVCm4oPi7dP1Jog0G7zIp2jaPe0oHVOV8DeBySxjvhcWFJK0Pb5QeBS9FYYnyHDxzAZuOvzAKh6Q4FCXHcACrU4r4QlRU4lQisp1hb0enGHdOCDrX-a3Ew8sIAnHvA2hlQ07~0~hA6DDzLKe6gfnGDjPgVX1Yc5ZA5VcdF6f7M0JJ7TtRd6FRx1bOHEhttTrH3wSZHWWyNAdi66ULa6mUDUW~O5-GXSB6~bqcN5l-Ak-L9w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            alt="unipark">
+        <div class="menu">
+            <a href="#">Home </a>
+            <a href="#">Parking </a>
+            <a href="#">Profile </a>
         </div>
     </div>
 
-    <button th:href="@{/reservation}" type="submit" class="book-button">Book</button>
+
+
+
+    <img class="logo2"
+        src="https://s3-alpha-sig.figma.com/img/d731/337c/05c1f17bd9689d321ff2c3a4e728f9a7?Expires=1701648000&Signature=pP1ImRBPmxETSo-G-03asOyf7M9y8etWEwxnc1HRHd6mCJvMb0jz5Bi792EiZkfcqP4rsN47qWfZG2JqV4tZEYoFOx2ofvsxobLQYndMucaFHo3~Hy4EMDcXq3-o749PH7tn~oIs-PWqedgy-aHtFU--nDwcFwE-Y9bMHOOP7fd4wmPxof2S3qp1dpf5ykTFskUC4pIhYIXjZ7rMaeqppujfgwTkPn2GhvyiOGIBs88jxe2NBaRYH1zTnbNefyiLJYHVdGifbyI0CFzu7HLG5l9SPxEaXF72Z7yz8aw9Iken~enG2qWc09pX9i6RYp1OA~ZN8W4sID~8o~kj4zL-9A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+        alt="msquare">
+
+    <div class="box1">
+
+        <div class="box11">
+            <br>
+            Parking time<br><br>
+            8 : 00 <br>
+            - <br>
+            12 : 00 <br>
+            <!-- <button th:href="@{/m-booking}" type="submit">see</button> -->
+            <div class="button-link"><a class="a-link" th:href="@{/m-booking}">see</a></div>
+            
+
+        </div>
+
+        <div class="box22">
+            <br>
+            Parking time<br><br>
+            12 : 00 <br>
+            - <br>
+            16 : 00 <br>
+            <button>see</button>
+
+        </div>
+
+        <div class="box33">
+            <br>
+            Parking time<br><br>
+            16 : 00 <br>
+            - <br>
+            20 : 00 <br>
+            <button>see</button>
+        </div>
+
+        <div class="box44">
+            <br>
+            Parking time<br><br>
+            20 : 00 <br>
+            - <br>
+            24 : 00 <br>
+            <button>see</button>
+        </div>
+    </div>
+
+
+
+    </div>
+
 
 </body>
+
 </html>
