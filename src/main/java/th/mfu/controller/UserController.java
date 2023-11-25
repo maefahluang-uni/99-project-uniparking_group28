@@ -1,21 +1,21 @@
 package th.mfu.controller;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Locale;
+import th.mfu.services.UserService;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class UserController {
@@ -42,11 +42,6 @@ public class UserController {
         return "admin-login"; 
     }
 
-    @GetMapping("/main")
-    public String showMainPage(){
-        return "main-page";
-    }
-
     @GetMapping("/m-square")
     public String showMsquarePage(){
         return "m-square";
@@ -56,6 +51,19 @@ public class UserController {
     public String showMBookingPage(){
         return "booking";
     }
+
+    @PostMapping("/main")
+    public String processLogin(String username, String password, RedirectAttributes redirectAttributes) {
+        if (UserService.isValidUser(username, password)) {
+            // Valid user, redirect to success page
+            return "main-page";
+        } else {
+            // Invalid user, redirect back to login with an error message
+            redirectAttributes.addFlashAttribute("error", "Invalid username or password");
+            return "redirect:/login";
+        }
+    }
+   
 
   
 

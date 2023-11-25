@@ -31,8 +31,6 @@ public class ReservationService {
     public Reservation updateReservation(Reservation reservation){
         var reservationData = new Reservation();
         reservationData.setReservationID(reservation.getReservationID());
-        reservationData.setLocation(reservation.getLocation());
-        reservationData.setDuration(reservation.getDuration());
 
         return repository.save(reservationData);
     }
