@@ -1,4 +1,4 @@
-package th.mfu.domain;
+package th.mfu.model;
 
 public class Admin{
 
