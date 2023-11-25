@@ -61,7 +61,10 @@ public class UserController {
     public String showReservationPage(){
         return "reservation";
     }
-
+@PostMapping("/test")
+    public String showLayoutPage(){
+        return "layout";
+    }
     
 
 
