@@ -9,15 +9,27 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
+@Table(name = "Reservation")
 public class Reservation{
 
       @Id
       @GeneratedValue(strategy = GenerationType.IDENTITY)
-      private int reservationID;     
+      private int reservationID;  
+      
+      @column(name = "userID")
       private int userID;
+
+      @column(name = "date")
       private Date date;
+
+      @column(name = "startTime")
       private Time startTime;
-      private String location, duration;
+
+      @column(name = "location")
+      private String location;
+
+      @column(name = "duration")
+      private String duration;
 
       public Reservation(){
         
