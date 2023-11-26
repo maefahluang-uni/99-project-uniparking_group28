@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Receipt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: white; /* Set the background color to white */
+        }
+
+        .receipt-container {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #990000; /* Set the box background color to #990000 */
+            color: white; /* Set the text color to white */
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .username {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .username label {
+            display: block;
+            margin-top: 10px;
+            color: #666;
+        }
+
+        .username span {
+            display: block;
+            margin-top: 5px;
+        }
+
+        .selectedPlace {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .selectedPlace label {
+            display: block;
+            margin-top: 10px;
+            color: #666;
+        }
+
+        .selectedPlace span {
+            display: block;
+            margin-top: 5px;
+        }
+
+        .selectedTime {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .selectedTime label {
+            display: block;
+            margin-top: 10px;
+            color: #666;
+        }
+
+        .selectedTime span {
+            display: block;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="receipt-container">
+        <h2>Booking Receipt</h2>
+
+        <div class="username">
+            <label for="currentUser">Username:</label>
+            <span id="currentUser" th:text="${currentUser}"></span>
+        </div>
+
+        <div class="selectedPlace">
+            <label for="selectedPlace">Booking Place:</label>
+            <span id="selectedPlace" th:text="${selectedPlace}"></span>
+        </div>
+
+        <div class="selectedTime">
+            <label for="selectedTime">Selected time:</label>
+            <span id="selectedTime" th:text="${selectedTime}"></span>
+        </div>
+
+        <p>Thanks for your booking!</p>
+    </div>
+
+</body>
+</html>
