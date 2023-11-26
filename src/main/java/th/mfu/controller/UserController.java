@@ -3,6 +3,8 @@ package th.mfu.controller;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+
+import th.mfu.services.AdminService;
 import th.mfu.services.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -66,6 +68,19 @@ public class UserController {
             // Invalid user, redirect back to login with an error message
             redirectAttributes.addFlashAttribute("error", "Invalid username or password");
             return "redirect:/login";
+        }
+    }
+
+    @PostMapping("/admin-view")
+    public String processAdminLogin(String username, String password, RedirectAttributes redirectAttributes) {
+        if (AdminService.isValidUser(username, password)) {
+            // Valid user, redirect to success page
+            currentUser = username;
+            return "admin-view";
+        } else {
+            // Invalid user, redirect back to login with an error message
+            redirectAttributes.addFlashAttribute("error", "Invalid username or password");
+            return "redirect:/admin-login";
         }
     }
 
