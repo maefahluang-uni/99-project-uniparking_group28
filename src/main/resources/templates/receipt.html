@@ -65,19 +65,16 @@
         <h2>Booking Receipt</h2>
 
         <div class="info">
-            <label for="name">Name:</label>
-            <span id="name">John Doe</span>
-
-            <label for="phoneNumber">Phone Number:</label>
-            <span id="phoneNumber">123-456-7890</span>
+            <label for="username">Username:</label>
+            <span id="name"> <%= currentUser %> </span>
         </div>
 
         <div class="booking-info">
             <label for="bookingPlace">Booking Place:</label>
-            <span id="bookingPlace">Your Booking Place</span>
+            <span id="bookingPlace"> <%= currentPlace %> </span>
         </div>
 
-        <p>Thank you for your booking!</p>
+        <p>Thanks for your booking!</p>
     </div>
 
 </body>

@@ -12,10 +12,7 @@ import th.mfu.services.UserService;
 @RequestMapping("/login")
 public class LoginController {
 
-    private final UserService userService;
-
     public LoginController(UserService userService) {
-        this.userService = userService;
     }
 
     @GetMapping
