@@ -8,7 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import static javax.swing.JOptionPane.showMessageDialog;
 
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
@@ -21,9 +20,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Controller
 public class UserController {
 
-    static String currentUser;
-    static String selectedTime;
-    static String selectedPlace;
+    private String currentUser;
+    private String selectedTime;
+    private String selectedPlace;
 
     @InitBinder
     public final void initBinderUsuariosFormValidator(final WebDataBinder binder, final Locale locale) {
@@ -82,17 +81,29 @@ public class UserController {
     }
 
     //if yes
-    @GetMapping("/reciept")
-    public String firstDurationSelected(){
+    @GetMapping("/receipt")
+    public String firstDurationSelected(Model model) {
         selectedTime = "08:00-12:00";
+
+        model.addAttribute("currentUser", currentUser);
+        model.addAttribute("selectedPlace", selectedPlace);
+        model.addAttribute("selectedTime", selectedTime);
+
         return "receipt";
     }
-   
+     
+     @ModelAttribute("currentUser")
+     public String getCurrentUser() {
+         return currentUser;
+     }
 
-  
+     @ModelAttribute("selectedPlace")
+     public String getSelectedPlace() {
+         return selectedPlace;
+     }
 
-
-
-
-    
+     @ModelAttribute("selectedTime")
+     public String getSelectedTime() {
+         return selectedTime;
+     }    
 }

@@ -26,34 +26,50 @@
             color: #333;
         }
 
-        .info {
+        .username {
             margin-top: 20px;
             text-align: left;
         }
 
-        .info label {
+        .username label {
             display: block;
             margin-top: 10px;
             color: #666;
         }
 
-        .info span {
+        .username span {
             display: block;
             margin-top: 5px;
         }
 
-        .booking-info {
+        .selectedPlace {
             margin-top: 20px;
             text-align: left;
         }
 
-        .booking-info label {
+        .selectedPlace label {
             display: block;
             margin-top: 10px;
             color: #666;
         }
 
-        .booking-info span {
+        .selectedPlace span {
+            display: block;
+            margin-top: 5px;
+        }
+
+        .selectedTime {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .selectedTime label {
+            display: block;
+            margin-top: 10px;
+            color: #666;
+        }
+
+        .selectedTime span {
             display: block;
             margin-top: 5px;
         }
@@ -64,14 +80,19 @@
     <div class="receipt-container">
         <h2>Booking Receipt</h2>
 
-        <div class="info">
-            <label for="username">Username:</label>
-            <span id="name"> <%= currentUser %> </span>
+        <div class="username">
+            <label for="currentUser">Username:</label>
+            <span id="currentUser" th:text="${currentUser}"></span>
         </div>
 
-        <div class="booking-info">
-            <label for="bookingPlace">Booking Place:</label>
-            <span id="bookingPlace"> <%= currentPlace %> </span>
+        <div class="selectedPlace">
+            <label for="selectedPlace">Booking Place:</label>
+            <span id="selectedPlace" th:text="${selectedPlace}"></span>
+        </div>
+
+        <div class="selectedTime">
+            <label for="selectedTime">Selected time:</label>
+            <span id="selectedTime" th:text="${selectedTime}"></span>
         </div>
 
         <p>Thanks for your booking!</p>
