@@ -168,9 +168,11 @@ margin-left: 100px;
             <span class="box11">Available</span>
             <div class="number1">
             5  Slot
-            </div>
-            <button class="book" type="submit" th:ref="/yesno">Book</button>
-            </div>
+
+            <!-- แก้ตรงนี้ -->
+            <form action="/yesno" method="get">
+                <button class="book" type="submit">Book</button>
+            </form>
             
             <div class="box2">
             <span class="box22">All slot</span>
